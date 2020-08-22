@@ -11,7 +11,7 @@
       />
     </div>
 
-    <!-- <CalendarWeekdays/> -->
+    <CalendarWeekdays/>
 
     <ol>
       <!-- <CalendarMonthDayItem/> -->
@@ -26,6 +26,7 @@ import weekOfYear from "dayjs/plugin/weekOfYear";
 
 import CalendarDateSelected from './CalendarDateSelected';
 import CalendarDatePagination from './CalendarDatePagination';
+import CalendarWeekdays from './CalendarWeekdays';
 
 dayjs.extend(weekday);
 dayjs.extend(weekOfYear);
@@ -34,7 +35,8 @@ export default {
   name: 'CalendarMonth',
   components: {
     CalendarDateSelected,
-    CalendarDatePagination
+    CalendarDatePagination,
+    CalendarWeekdays
   },
   data() {
     return {
