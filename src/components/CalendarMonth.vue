@@ -48,7 +48,8 @@ export default {
   data() {
     return {
       selectedDate: dayjs(),
-      today: dayjs().format("YYYY-MM-DD")
+      today: dayjs().format("YYYY-MM-DD"),
+      rows: []
     };
   },
   methods: {
@@ -57,6 +58,31 @@ export default {
     },
     getWeekday(date) {
       return dayjs(date).weekday();
+    },
+    createRows(row) {
+      let tempArray = [];
+      let current = this.rows;
+
+      // If already filled, empty array
+      if(current.length) {
+        current = [];
+      }
+
+      // Divide days up into individual arrays of 7
+      row.forEach( r => {
+        tempArray.push(r);
+        if( tempArray.length === 7 ){
+          current.push(tempArray);
+          tempArray = []; // reset the temp array
+      }
+      });
+
+      // Push whatever is left over back into array
+      if (tempArray.length) {
+        current.push(tempArray);
+      }
+
+      return current;
     }
   },
   computed: {
@@ -64,7 +90,7 @@ export default {
       return [
         ...this.previousMonthDays,
         ...this.currentMonthDays,
-        ...this.nextMonthDays
+        ...this.nextMonthDays,
       ]
     },
     month() {
@@ -110,6 +136,9 @@ export default {
           isCurrentMonth: false
         };
       });
+    },
+    weeklyRow() {
+      return this.createRows(this.days);
     }
   }
 }
