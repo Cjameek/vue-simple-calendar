@@ -29,6 +29,15 @@ export default {
   --calendar-button: #fff89d;
   --calendar-button-hover: #fff238;
   --current-day: blue;
+
+  // --calendar-bg-dark: #151515;
+  // --calendar-text-dark: #ffffff;
+  // --calendar-body-dark: #0f0f0f;
+  // --calendar-heading-dark: #171717;
+  // --calendar-day-dark: #a31414;
+  // --calendar-button-dark: #fff89d;
+  // --calendar-button-hover-dark: #6d692d;
+  // --current-day-dark: blue;
 }
 * {
   -webkit-box-sizing: border-box;
