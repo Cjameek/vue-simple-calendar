@@ -1,5 +1,5 @@
 <template>
-  <div class="calendar__header_date">{{ selectedMonth }}</div>
+  <h3 class="calendar__header_date">{{ selectedMonth }}</h3>
 </template>
 
 <script>

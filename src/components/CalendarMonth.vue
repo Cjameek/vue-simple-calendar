@@ -115,17 +115,23 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style lang="scss" scoped>
+.calendar {
+  &__days-list {
+      background-color: #fdfdfd;
+      display: flex;
+      flex-wrap: wrap;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+  }
+}
 h3 {
   margin: 40px 0 0;
 }
-ul {
+ul,
+ol {
   list-style-type: none;
   padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
 }
 a {
   color: #42b983;

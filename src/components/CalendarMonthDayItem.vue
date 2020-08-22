@@ -30,6 +30,25 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+.calendar-days {
+    &__day {
+        background-color: transparent;
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 14.28571%;
+        height: 50px;
+        font-size: 14px;
+        text-align: center;
+        cursor: pointer;
+        transition: background-color 300ms ease;
 
+        &:hover,
+        &:focus {
+            background-color: #f0f0f0;
+        }
+    }
+}
 </style>
