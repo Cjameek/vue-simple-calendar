@@ -43,6 +43,11 @@ export default {
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px;
     }
+    &__row {
+      display: flex;
+      width: 100%;
+      height: auto;
+    }
     &__weekdays {
         background-color: #f6f6f6;
         display: flex;
