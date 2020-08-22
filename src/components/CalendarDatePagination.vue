@@ -2,10 +2,10 @@
   <nav class="calendar__header_pagination calendar-pagination">
       <ul class="calendar-pagination__list">
           <li class="calendar-pagination__list-item">
-              <button @click="selectPrevious" class="calendar-pagination__button calendar-pagination__button--previous">Previous</button>
+            <button @click="selectCurrent" class="calendar-pagination__button calendar-pagination__button--current">Today</button>
           </li>
           <li class="calendar-pagination__list-item">
-            <button @click="selectCurrent" class="calendar-pagination__button calendar-pagination__button--current">Today</button>
+              <button @click="selectPrevious" class="calendar-pagination__button calendar-pagination__button--previous">Previous</button>
           </li>
           <li class="calendar-pagination__list-item">
             <button @click="selectNext" class="calendar-pagination__button calendar-pagination__button--next">Next</button>
