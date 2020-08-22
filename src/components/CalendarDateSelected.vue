@@ -4,6 +4,7 @@
 
 <script>
 export default {
+    name: 'CalendarDateSelected',
     props: {
         selectedDate: {
             type: Object,
