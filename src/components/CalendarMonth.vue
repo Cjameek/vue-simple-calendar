@@ -9,6 +9,7 @@
         :selected-date="selectedDate"
         @dateSelected="selectDate"
       />
+      <CalendarSkip link="#main"/>
       <CalendarWeekdays/>
     </thead>
 
@@ -33,6 +34,7 @@ import weekday from "dayjs/plugin/weekday";
 import weekOfYear from "dayjs/plugin/weekOfYear";
 import CalendarDateSelected from './CalendarDateSelected';
 import CalendarDatePagination from './CalendarDatePagination';
+import CalendarSkip from './CalendarSkip';
 import CalendarWeekdays from './CalendarWeekdays';
 import CalendarMonthRow from './CalendarMonthRow';
 
@@ -44,6 +46,7 @@ export default {
   components: {
     CalendarDateSelected,
     CalendarDatePagination,
+    CalendarSkip,
     CalendarWeekdays,
     CalendarMonthRow,
   },
