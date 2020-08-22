@@ -1,5 +1,5 @@
 <template>
-  <div class="calendar-current-date">{{ selectedMonth }}</div>
+  <div class="calendar__header_date">{{ selectedMonth }}</div>
 </template>
 
 <script>
