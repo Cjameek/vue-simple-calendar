@@ -1,5 +1,5 @@
 <template>
-  <div class="calendar__row">
+  <tr class="calendar__row">
     <CalendarMonthDayItem
         v-for="day in getAllDays"
         :key="day.date"
@@ -7,7 +7,7 @@
         :is-current-month="day.isCurrentMonth"
         :is-current-day="day.date === getCurrentDay"
       />
-  </div>
+  </tr>
 </template>
 
 <script>

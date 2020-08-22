@@ -1,7 +1,7 @@
 <template>
-  <div class="calendar-days__day" :class="{'calendar-days__day--not-current': !isCurrentMonth, 'calendar-days__day--today': isCurrentDay}">
+  <td class="calendar-days__day" :class="{'calendar-days__day--not-current': !isCurrentMonth, 'calendar-days__day--today': isCurrentDay}">
       <span class="calendar-days__label">{{label}}</span>
-  </div>
+  </td>
 </template>
 
 <script>

@@ -1,6 +1,6 @@
 <template>
-  <section class="calendar__month">
-    <div class="calendar__header">
+  <table class="calendar__month">
+    <thead class="calendar__header">
       <CalendarDateSelected 
         :selected-date="selectedDate"
       />
@@ -9,19 +9,22 @@
         :selected-date="selectedDate"
         @dateSelected="selectDate"
       />
-    </div>
+      <CalendarWeekdays/>
+    </thead>
 
-    <CalendarWeekdays/>
-
-    <div class="calendar__days-list calendar-days">
+    <tbody class="calendar__days-list calendar-days">
       <CalendarMonthRow
         v-for="(row, index) in weeklyRows"
         :key="`row-${index}`"
         :row="row"
         :today="today"
       />
-    </div>
-  </section>
+    </tbody>
+
+    <tfoot>
+      <!-- <CalendarLegend/> -->
+    </tfoot>
+  </table>
 </template>
 
 <script>

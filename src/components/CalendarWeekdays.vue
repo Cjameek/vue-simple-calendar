@@ -1,9 +1,9 @@
 <template>
-  <ol class="calendar__weekdays">
-      <li class="calendar__weekday" v-for="weekday in weekdays" :key="weekday">
+  <tr class="calendar__row calendar__weekdays">
+      <th class="calendar__weekday" v-for="weekday in weekdays" :key="weekday">
           {{weekday}}
-      </li>
-  </ol>
+      </th>
+  </tr>
 </template>
 
 <script>
