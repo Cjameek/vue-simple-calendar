@@ -18,25 +18,3 @@ export default {
     }
 }
 </script>
-
-<style lang="scss" scoped>
-.calendar {
-    &__weekdays {
-        background-color: #f6f6f6;
-        display: flex;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-    }
-
-    &__weekday {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 14.28571%;
-        height: 50px;
-        font-size: 14px;
-        font-weight: 700;
-        text-align: center;
-    }
-}
-</style>

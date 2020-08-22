@@ -114,32 +114,3 @@ export default {
   }
 }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="scss" scoped>
-.calendar {
-  &__month {
-    border-radius: 30px;
-    padding: 30px;
-    box-shadow: 0px 0px 15px -5px rgba(0,0,0,.5);
-  }
-  &__days-list {
-      background-color: #fdfdfd;
-      display: flex;
-      flex-wrap: wrap;
-      border-bottom-left-radius: 10px;
-      border-bottom-right-radius: 10px;
-  }
-}
-h3 {
-  margin: 0;
-}
-ul,
-ol {
-  list-style-type: none;
-  padding: 0;
-}
-a {
-  color: #42b983;
-}
-</style>

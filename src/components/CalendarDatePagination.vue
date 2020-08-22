@@ -46,28 +46,3 @@ export default {
     }
 }
 </script>
-
-<style lang="scss" scoped>
-.calendar-pagination {
-    &__list {
-        list-style-type: none;
-        display: flex;
-        justify-content: space-between;
-        padding: 24px 0;
-    }
-    &__button {
-        background-color: #ccc;
-        border-radius: 5px;
-        border: none;
-        padding: 12px 25px;
-        font-weight: 700;
-        cursor: pointer;
-        transition: background-color 300ms ease;
-
-        &:hover,
-        &:focus {
-            background-color: darken(#ccc, 10%);
-        }
-    }
-}
-</style>
