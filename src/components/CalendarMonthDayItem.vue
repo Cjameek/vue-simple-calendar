@@ -1,5 +1,5 @@
 <template>
-  <li class="calendar-days__day" :class="{'calendar-day__day--not-current': !isCurrentMonth, 'calendar-day__day--today': isCurrentDay}">
+  <li class="calendar-days__day" :class="{'calendar-days__day--not-current': !isCurrentMonth, 'calendar-days__day--today': isCurrentDay}">
       <span class="calendar-days__label">{{label}}</span>
   </li>
 </template>
@@ -43,11 +43,16 @@ export default {
         font-size: 14px;
         text-align: center;
         cursor: pointer;
-        transition: background-color 300ms ease;
+        transition: background-color 300ms ease, opacity 300ms ease;
 
         &:hover,
         &:focus {
             background-color: #f0f0f0;
+            opacity: 1;
+        }
+
+        &--not-current {
+            opacity: .5;
         }
     }
 }
