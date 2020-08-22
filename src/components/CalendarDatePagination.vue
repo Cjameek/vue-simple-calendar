@@ -59,7 +59,8 @@ export default {
         background-color: #ccc;
         border-radius: 5px;
         border: none;
-        padding: 12px;
+        padding: 12px 25px;
+        font-weight: 700;
         cursor: pointer;
         transition: background-color 300ms ease;
 

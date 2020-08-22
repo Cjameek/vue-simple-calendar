@@ -54,6 +54,23 @@ export default {
         &--not-current {
             opacity: .5;
         }
+
+        &--today {
+            .calendar-days {
+                &__label {
+                    background-color: blue;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 30px;
+                    padding: 5px;
+                    width: 30px;
+                    height: 30px;
+                    color: #fff;
+                    font-weight: 700;
+                }
+            }
+        }
     }
 }
 </style>
