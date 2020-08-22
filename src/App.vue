@@ -1,17 +1,19 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <CalendarMonth/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+/**
+ * App idea based off the following tutorial - https://css-tricks.com/lets-make-a-vue-powered-monthly-calendar/
+ */
+import CalendarMonth from './components/CalendarMonth.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    CalendarMonth
   }
 }
 </script>
