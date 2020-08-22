@@ -18,7 +18,8 @@
         v-for="day in days"
         :key="day.date"
         :day="day"
-        :is-today="day.date === today"
+        :is-current-month="day.isCurrentMonth"
+        :is-current-day="day.date === today"
       />
     </ol>
   </section>
@@ -117,6 +118,10 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 .calendar {
+  &__month {
+    padding: 30px;
+    box-shadow: 0px 0px 15px -5px rgba(0,0,0,.5);
+  }
   &__days-list {
       background-color: #fdfdfd;
       display: flex;
@@ -126,7 +131,7 @@ export default {
   }
 }
 h3 {
-  margin: 40px 0 0;
+  margin: 0;
 }
 ul,
 ol {
