@@ -5,7 +5,7 @@
               <button @click="selectPrevious" class="calendar-pagination__button calendar-pagination__button--previous">Previous</button>
           </li>
           <li class="calendar-pagination__list-item">
-            <button @click="selectCurrent" class="calendar-pagination__button calendar-pagination__button--current">Current</button>
+            <button @click="selectCurrent" class="calendar-pagination__button calendar-pagination__button--current">Today</button>
           </li>
           <li class="calendar-pagination__list-item">
             <button @click="selectNext" class="calendar-pagination__button calendar-pagination__button--next">Next</button>
