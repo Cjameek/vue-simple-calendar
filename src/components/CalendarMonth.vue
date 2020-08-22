@@ -1,8 +1,14 @@
 <template>
   <section class="calendar__month">
     <div class="calendar__header">
-      <CalendarDateSelected />
-      <CalendarDatePagination />
+      <CalendarDateSelected 
+        :selected-date="selectedDate"
+      />
+      <CalendarDatePagination 
+        :current-date="today"
+        :selected-date="selectedDate"
+        @dateSelected="selectDate"
+      />
     </div>
 
     <!-- <CalendarWeekdays/> -->
@@ -26,12 +32,20 @@ dayjs.extend(weekOfYear);
 
 export default {
   name: 'CalendarMonth',
-  props: {
-    //msg: String
-  },
   components: {
     CalendarDateSelected,
     CalendarDatePagination
+  },
+  data() {
+    return {
+      selectedDate: dayjs(),
+      today: dayjs().format("YYYY-MM-DD")
+    };
+  },
+  methods: {
+    selectDate(newDateSelection) {
+      this.selectedDate = newDateSelection;
+    }
   }
 }
 </script>
