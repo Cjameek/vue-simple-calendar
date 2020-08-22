@@ -13,7 +13,7 @@
 
     <CalendarWeekdays/>
 
-    <ol>
+    <ol class="calendar__days-list calendar-days">
       <!-- <CalendarMonthDayItem/> -->
     </ol>
   </section>
