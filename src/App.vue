@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="calendar" class="calendar">
     <CalendarMonth/>
   </div>
 </template>
