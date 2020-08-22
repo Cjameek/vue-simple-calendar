@@ -1,6 +1,8 @@
 <template>
   <td class="calendar-days__day" :class="{'calendar-days__day--not-current': !isCurrentMonth, 'calendar-days__day--today': isCurrentDay}">
-      <span class="calendar-days__label">{{label}}</span>
+      <button class="calendar-days__button" href="#">
+        <span class="calendar-days__label">{{label}}</span>
+      </button>
   </td>
 </template>
 
