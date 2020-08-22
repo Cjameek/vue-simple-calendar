@@ -1,7 +1,7 @@
 <template>
-  <section class="calendar-month">
-    <div class="calendar-header">
-      <CalendarDateSelected />
+  <section class="calendar__month">
+    <div class="calendar__header">
+      <!-- <CalendarDateSelected /> -->
       <!-- <CalendarDatePagination /> -->
     </div>
 
@@ -17,7 +17,6 @@
 import dayjs from "dayjs";
 import weekday from "dayjs/plugin/weekday";
 import weekOfYear from "dayjs/plugin/weekOfYear";
-import CalendarDateSelected from './CalendarDateSelected.vue'
 
 dayjs.extend(weekday);
 dayjs.extend(weekOfYear);
@@ -27,7 +26,6 @@ export default {
     //msg: String
   },
   components: {
-    CalendarDateSelected
   }
 }
 </script>
