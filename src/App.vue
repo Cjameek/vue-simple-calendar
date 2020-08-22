@@ -1,8 +1,8 @@
 <template>
-  <div id="calendar" class="calendar">
-    <h2>Example Calendar</h2>
+  <aside id="calendar" class="calendar">
+    <h2 class="calendar__title">Example Calendar</h2>
     <CalendarMonth/>
-  </div>
+  </aside>
 </template>
 
 <script>
@@ -20,24 +20,44 @@ export default {
 </script>
 
 <style lang="scss">
-#calendar {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  max-width: 500px;
-  margin: auto;
-  padding: 50px 0;
+:root {
+  --calendar-bg: #fff;
+  --calendar-body: #fdfdfd;
+  --calendar-heading: #f6f6f6;
+  --calendar-day: #ccc;
 }
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+h3 {
+  margin: 0;
+}
+
 .calendar {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: var(--calendar-bg);
+    text-align: center;
+    color: #2c3e50;
+    max-width: 500px;
+    margin: auto;
+    padding: 50px 0;
+    
     &__month {
       border-radius: 30px;
       padding: 30px;
       box-shadow: 0px 0px 15px -5px rgba(0,0,0,.5);
     }
     &__days-list {
-        background-color: #fdfdfd;
+        background-color: var(--calendar-body);
         display: flex;
         flex-wrap: wrap;
         border-bottom-left-radius: 10px;
@@ -49,7 +69,7 @@ export default {
       height: auto;
     }
     &__weekdays {
-        background-color: #f6f6f6;
+        background-color: var(--calendar-heading);
         display: flex;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
@@ -65,6 +85,22 @@ export default {
         font-weight: 700;
         text-align: center;
     }
+    &__skip {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      opacity: 0;
+      pointer-events: none;
+      overflow: hidden;
+
+      &:focus {
+        position: relative;
+        width: 100%;
+        height: auto;
+        opacity: 1;
+        pointer-events: visible;
+      }
+    }
 }
 .calendar-pagination {
     &__list {
@@ -74,7 +110,7 @@ export default {
         padding: 24px 0;
     }
     &__button {
-        background-color: #ccc;
+        background-color: var(--calendar-day);
         border-radius: 5px;
         border: none;
         padding: 12px 25px;
@@ -90,23 +126,11 @@ export default {
 }
 .calendar-days {
     &__day {
-        background-color: transparent;
-        position: relative;
         display: inline-flex;
         align-items: center;
         justify-content: center;
         width: 14.28571%;
         height: 50px;
-        font-size: 14px;
-        text-align: center;
-        cursor: pointer;
-        transition: background-color 300ms ease, opacity 300ms ease;
-
-        &:hover,
-        &:focus {
-            background-color: #f0f0f0;
-            opacity: 1;
-        }
 
         &--not-current {
             opacity: .5;
@@ -129,21 +153,26 @@ export default {
             }
         }
     }
-}
-* {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-ul,
-ol {
-  margin: 0;
-  list-style-type: none;
-  padding: 0;
-}
-h3 {
-  margin: 0;
-}
-a {
-  color: #42b983;
+
+    &__button {
+        background-color: transparent;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        border: none;
+        font-size: 14px;
+        text-align: center;
+        cursor: pointer;
+        transition: background-color 300ms ease, opacity 300ms ease;
+
+        &:hover,
+        &:focus {
+            background-color: #f0f0f0;
+        }
+    }
+
+    &__label {
+      margin: auto;
+    }
 }
 </style>
