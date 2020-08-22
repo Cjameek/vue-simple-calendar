@@ -23,7 +23,7 @@
     </tbody>
 
     <tfoot>
-      <!-- <CalendarLegend/> -->
+      <CalendarLegend />
     </tfoot>
   </table>
 </template>
@@ -37,6 +37,7 @@ import CalendarDatePagination from './CalendarDatePagination';
 import CalendarSkip from './CalendarSkip';
 import CalendarWeekdays from './CalendarWeekdays';
 import CalendarMonthRow from './CalendarMonthRow';
+import CalendarLegend from './CalendarLegend';
 
 dayjs.extend(weekday);
 dayjs.extend(weekOfYear);
@@ -49,6 +50,7 @@ export default {
     CalendarSkip,
     CalendarWeekdays,
     CalendarMonthRow,
+    CalendarLegend,
   },
   data() {
     return {
