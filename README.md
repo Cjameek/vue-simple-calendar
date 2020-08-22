@@ -1,9 +1,7 @@
 # vue-simple-calendar
 
-## Project setup
-```
-npm install
-```
+## What is this project?
+Simple Vue JS calendar using Day.js which will eventually make its way into a Wordpress plugin. Eventually. Keeping the codebases separate for the time being.
 
 ### Compiles and hot-reloads for development
 ```
