@@ -14,7 +14,7 @@
     <!-- <CalendarWeekdays/> -->
 
     <ol>
-      <!-- <CalendarGrid/> -->
+      <!-- <CalendarMonthDayItem/> -->
     </ol>
   </section>
 </template>
