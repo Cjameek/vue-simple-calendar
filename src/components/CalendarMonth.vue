@@ -13,15 +13,14 @@
 
     <CalendarWeekdays/>
 
-    <ol class="calendar__days-list calendar-days">
-      <CalendarMonthDayItem
-        v-for="day in days"
-        :key="day.date"
-        :day="day"
-        :is-current-month="day.isCurrentMonth"
-        :is-current-day="day.date === today"
+    <div class="calendar__days-list calendar-days">
+      <CalendarMonthRow
+        v-for="(row, index) in weeklyRows"
+        :key="`row-${index}`"
+        :row="row"
+        :today="today"
       />
-    </ol>
+    </div>
   </section>
 </template>
 
@@ -32,7 +31,7 @@ import weekOfYear from "dayjs/plugin/weekOfYear";
 import CalendarDateSelected from './CalendarDateSelected';
 import CalendarDatePagination from './CalendarDatePagination';
 import CalendarWeekdays from './CalendarWeekdays';
-import CalendarMonthDayItem from './CalendarMonthDayItem';
+import CalendarMonthRow from './CalendarMonthRow';
 
 dayjs.extend(weekday);
 dayjs.extend(weekOfYear);
@@ -43,7 +42,7 @@ export default {
     CalendarDateSelected,
     CalendarDatePagination,
     CalendarWeekdays,
-    CalendarMonthDayItem
+    CalendarMonthRow,
   },
   data() {
     return {
@@ -137,7 +136,7 @@ export default {
         };
       });
     },
-    weeklyRow() {
+    weeklyRows() {
       return this.createRows(this.days);
     }
   }
